@@ -1,18 +1,21 @@
-Gjallarhorn
+
+
 "<canvas id = "ctx" width = "700" height="500" style="border:1px solid #000000;"></canvas>"
 <script>
 var canv = document.getElementById("ctx");
 var ctx = canv.getContext("2d");
-var x = 20
-ctx.fillRect(x,20,40,10,50)
-x = 400;
-ctx.fillRect(x,200,100,200);
-var x = 250
-ctx.fillRect(x,250,50,50);
-x = 500
-setInterval(change,20)
-function change (){
-x++;
+var x = 0
+setInterval(change,20);
 
+function change90{
+ ctx.clearRect(0,0,500,700)
+  x = x + movement
+  ctx.fillRect(x,250,50,50);
+
+if(x==650){
+movement = -1;
+
+}
+}
 
 </script>
